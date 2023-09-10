@@ -25,14 +25,8 @@
 }
 
 body {
-  /*
-  background-image: url(./assets/bg-mobile.jpg);
-  background-repeat: no-repeat; /* Para a imagem não repetir */
-  /* background-position: top center; /* A base ser a relação entre o topot da página e o centro da imagem */
-  /* background-size: cover;  Preencher todo o espaçõ da página */
-
-  /*background: color image repeat position/size -- Unica propriedade shortrend ou atalho */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -136,7 +130,7 @@ ul li a {
   transition: background 0.2s;
 }
 
-/* pseudo selector - Aplica quando passar o mouse em cima */
+/* pseudo selector */
 ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
@@ -171,4 +165,14 @@ footer {
   padding: 24px;
   text-align: center;
   font-size: 14px;
+}
+
+/* media queries */
+@media (win-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
